@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS devBlog_db;
+CREATE DATABASE devBlog_db;
