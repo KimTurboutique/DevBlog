@@ -12,8 +12,10 @@ const newFormHandler = async (event) => {
           'Content-Type': 'application/json',
         },
       });
-  
-      if (response.ok) {
+      if (response.redirected) {
+        document.location.assign(response.url)
+      }  
+      else if (response.ok) {
         document.location.reload();
       } else {
         alert('Failed to create comment');

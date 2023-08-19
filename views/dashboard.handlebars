@@ -14,12 +14,11 @@
     </p>
   </div>
   <div>
-    <button post-id={{post.id}} class="btn btn-primary updateBtn">Update</button>
+    <a href="/update/{{post.id}}"> <button post-id={{post.id}} class="btn btn-primary updateBtn">Update</button> </a>
     <button post-id={{post.id}} class="btn btn-primary deleteBtn">Delete</button>
   </div>
 </div>
 {{/each}}
 
 <a href="/new-post">Create new post.</a>
-<script src="/js/updatePost.js"></script>
 <script src="/js/editPost.js"></script>

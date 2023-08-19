@@ -5,7 +5,6 @@
 
 ## Table of Contents
 
-- [Deployed Application](#deployed)
 - [Test](#test)
 - [Acknowledgements](#acknowledgements)
 

@@ -87,4 +87,22 @@ router.get('/new-post', withAuth, (req, res) => {
   res.render('new-post');
 });
 
+router.get('/update/:id', async (req, res) => {
+  try {
+    const updateData = await Post.findByPk(req.params.id, {
+
+    });
+
+    const post = updateData.get({ plain: true });
+
+    res.render('updatePost', {
+      ...post,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
